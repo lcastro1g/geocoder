@@ -43,7 +43,7 @@ class GeocodeService {
         return jsonMap
     }
 
-	private String removeSpaces(String query) {
-		query.replaceAll(" ", "+")
-	}
+    private String removeSpaces(String query) {
+        query.replaceAll(" ", "+")
+    }
 }

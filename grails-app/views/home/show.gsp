@@ -1,9 +1,9 @@
 <!doctype html>
 <html>
-	<head>
-		<meta name="layout" content="main"/>
-	</head>
-	<body>
+    <head>
+        <meta name="layout" content="main"/>
+    </head>
+    <body>
         <p>XML Results for: ${xmlMap.query}</p>
         <ul>
             <li>Latitude: ${xmlMap.lat}</li>
@@ -17,5 +17,5 @@
             <li>Longitude: ${jsonMap.lng}</li>
             <li>Address: ${jsonMap.address}</li>
         </ul>    
-	</body>
+    </body>
 </html>
