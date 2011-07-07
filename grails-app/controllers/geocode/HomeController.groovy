@@ -5,9 +5,11 @@ import groovy.json.JsonSlurper
 class HomeController {
     def geocodeService
  
-    def index = {
-        String queryForXML = "Times+Squre"
-        String queryForJSON = "Eiffel+Tower"
+	def index = {}
+
+    def show = {
+        String queryForXML = params.queryForXML
+		String queryForJSON = params.queryForJSON
 
         [xmlMap: geocodeService.queryForXML(queryForXML), jsonMap: geocodeService.queryForJSON(queryForJSON)]
     }

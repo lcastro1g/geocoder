@@ -17,7 +17,7 @@ class GeocodeService {
         def config = ConfigurationHolder.config
         String configUrlXML = config.googleapi.url.xml
         
-        def urlXML = new URL(configUrlXML + query)
+        def urlXML = new URL(configUrlXML + removeSpaces(query))
         def geoCodeResultXML = new XmlParser().parseText(urlXML.getText())
         def xmlMap = [:]
         xmlMap.query = query
@@ -32,7 +32,7 @@ class GeocodeService {
         def config = ConfigurationHolder.config
         String configUrlJSON = config.googleapi.url.json
         
-        def urlJSON = new URL(configUrlJSON + query)
+        def urlJSON = new URL(configUrlJSON + removeSpaces(query))
         def geoCodeResultJSON = new JsonSlurper().parseText(urlJSON.getText())
         def jsonMap = [:]
         jsonMap.query = query
@@ -42,4 +42,8 @@ class GeocodeService {
         
         return jsonMap
     }
+
+	private String removeSpaces(String query) {
+		query.replaceAll(" ", "+")
+	}
 }
