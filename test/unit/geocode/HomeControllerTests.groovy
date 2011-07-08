@@ -1,17 +1,15 @@
 package geocode
 
-
-
 import grails.test.mixin.*
 import org.junit.*
 
-/**
- * See the API for {@link grails.test.mixin.web.ControllerUnitTestMixin} for usage instructions
- */
+import geb.Browser
+
 @TestFor(HomeController)
 class HomeControllerTests {
 
-    void testSomething() {
-
+    void testIndex() {
+        controller.index()
+        assert response.text == ""
     }
 }

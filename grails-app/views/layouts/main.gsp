@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<title><g:layoutTitle default="Geocode"/></title>
+		<title><g:layoutTitle default="Geocoder"/></title>
 		<g:layoutHead/>
 	</head>
 	<body>
